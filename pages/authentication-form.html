@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/authentication-form.css" />
+    <script src="../js/scripts.js" defer></script>
     <title>Login and Signup</title>
   </head>
   <body class="bg-white">
@@ -28,7 +29,7 @@
           <p class="subtext">for existing users</p>
         </div>
         <!-- Sign IN form starts here -->
-        <form id="sign-in-form">
+        <form id="sign-in-form" action="#" class="form">
           <div class="form-input-control">
             <label for="login-field">Login</label>
             <input
@@ -43,8 +44,11 @@
             <input
               type="password"
               id="password-field"
+              name="password-field"
               placeholder="passwords must match"
               minlength="8"
+              maxlength="20"
+              autocomplete="off"
               required
             />
           </div>
@@ -66,12 +70,13 @@
           <p class="subtext">for new users</p>
         </div>
         <!-- Sign UP form starts here -->
-        <form id="sign-up-form">
+        <form id="sign-up-form" action="#" class="form">
           <div class="form-input-control">
             <label for="name-field">Your name</label>
             <input
               type="text"
               id="name-field"
+              name="name"
               minlength="5"
               placeholder="ex.: John Doe"
               required
@@ -82,7 +87,9 @@
             <input
               type="email"
               id="email"
+              name="email"
               placeholder="name@domain.zone"
+              autocomplete="email"
               required
             />
           </div>
@@ -91,9 +98,11 @@
             <input
               type="password"
               id="password"
+              name="password"
               placeholder="8 characters minimum"
               minlength="8"
               maxlength="20"
+              autocomplete="off"
               required
             />
           </div>
@@ -102,9 +111,11 @@
             <input
               type="password"
               id="confirm-password"
+              name="confirm-password"
               placeholder="passwords must match"
               minlength="8"
               maxlength="20"
+              autocomplete="off"
               required
             />
           </div>
@@ -113,14 +124,16 @@
             <input
               type="tel"
               id="phone"
+              name="phone-number"
               minlength="12"
               maxlength="12"
               placeholder="ex.: +12336456355"
+              required
             />
           </div>
           <div class="form-input-control">
             <label for="avatar">Avatar</label>
-            <input type="file" id="avatar" />
+            <input type="file" id="avatar" name="avatar" />
           </div>
           <div class="form-group-horizontal-control">
             <div class="form-input-control">
